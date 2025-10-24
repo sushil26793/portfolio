@@ -1,0 +1,267 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  /* Custom theme variables using CSS-first configuration */
+  
+  /* Breakpoints */
+  --breakpoint-xs: 475px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Spacing for custom values */
+  --spacing-18: 4.5rem;
+  --spacing-88: 22rem;
+  
+  /* Custom font families */
+  --font-family-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-family-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace;
+  
+  /* Custom animation durations */
+  --transition-duration-400: 400ms;
+  --transition-duration-600: 600ms;
+  --transition-duration-800: 800ms;
+}
+
+/* Base color palette - Light mode */
+:root {
+  --color-background: oklch(100% 0 0);
+  --color-foreground: oklch(9.8% 0.012 285.8);
+  
+  --color-card: oklch(100% 0 0);
+  --color-card-foreground: oklch(9.8% 0.012 285.8);
+  
+  --color-popover: oklch(100% 0 0);
+  --color-popover-foreground: oklch(9.8% 0.012 285.8);
+  
+  --color-primary: oklch(9.8% 0.012 285.8);
+  --color-primary-foreground: oklch(98.3% 0 0);
+  
+  --color-secondary: oklch(96.5% 0.004 285.8);
+  --color-secondary-foreground: oklch(9.8% 0.012 285.8);
+  
+  --color-muted: oklch(96.5% 0.004 285.8);
+  --color-muted-foreground: oklch(45.5% 0.007 285.8);
+  
+  --color-accent: oklch(96.5% 0.004 285.8);
+  --color-accent-foreground: oklch(9.8% 0.012 285.8);
+  
+  --color-destructive: oklch(57.7% 0.245 27.3);
+  --color-destructive-foreground: oklch(98.3% 0 0);
+  
+  --color-border: oklch(89.9% 0.004 285.9);
+  --color-input: oklch(89.9% 0.004 285.9);
+  --color-ring: oklch(9.8% 0.012 285.8);
+  
+  --color-chart-1: oklch(66.6% 0.193 231);
+  --color-chart-2: oklch(72.2% 0.157 164.7);
+  --color-chart-3: oklch(69.2% 0.117 74.8);
+  --color-chart-4: oklch(73.1% 0.175 71.3);
+  --color-chart-5: oklch(67.5% 0.194 348.6);
+  
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+/* Dark mode colors */
+.dark {
+  --color-background: oklch(9.8% 0.012 285.8);
+  --color-foreground: oklch(98.3% 0 0);
+  
+  --color-card: oklch(9.8% 0.012 285.8);
+  --color-card-foreground: oklch(98.3% 0 0);
+  
+  --color-popover: oklch(9.8% 0.012 285.8);
+  --color-popover-foreground: oklch(98.3% 0 0);
+  
+  --color-primary: oklch(98.3% 0 0);
+  --color-primary-foreground: oklch(9.8% 0.012 285.8);
+  
+  --color-secondary: oklch(15.9% 0.012 285.9);
+  --color-secondary-foreground: oklch(98.3% 0 0);
+  
+  --color-muted: oklch(15.9% 0.012 285.9);
+  --color-muted-foreground: oklch(65.5% 0.013 285.8);
+  
+  --color-accent: oklch(15.9% 0.012 285.9);
+  --color-accent-foreground: oklch(98.3% 0 0);
+  
+  --color-destructive: oklch(62.8% 0.257 29.2);
+  --color-destructive-foreground: oklch(98.3% 0 0);
+  
+  --color-border: oklch(15.9% 0.012 285.9);
+  --color-input: oklch(15.9% 0.012 285.9);
+  --color-ring: oklch(83% 0.01 285.9);
+  
+  --color-chart-1: oklch(70.7% 0.168 219.7);
+  --color-chart-2: oklch(72.3% 0.154 164.3);
+  --color-chart-3: oklch(72.2% 0.14 102.3);
+  --color-chart-4: oklch(77.5% 0.162 75.5);
+  --color-chart-5: oklch(75.2% 0.166 8);
+}
+
+/* Base layer - global styles */
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  font-synthesis-weight: none;
+  text-rendering: optimizeLegibility;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-muted-foreground);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-foreground);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus visible styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
+
+/* Custom utilities */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animated gradient background */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Custom shadow utilities */
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+}
+
+.dark .shadow-glow {
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+}
+
+/* Floating animation for hero elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Prevent text selection for decorative elements */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
