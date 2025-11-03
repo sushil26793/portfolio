@@ -74,24 +74,15 @@ export const About = () => {
                         <div className="space-y-6">
                             <div className="prose prose-lg dark:prose-invert max-w-none">
                                 <p className="text-muted-foreground leading-relaxed">
-                                    I'm a passionate Full Stack Developer specializing in the MERN
-                                    stack and blockchain technologies. With{' '}
-                                    {personalInfo.yearsOfExperience}+ years of experience, I've
-                                    helped businesses transform their ideas into scalable,
-                                    high-performance web applications.
+                                    I'm a passionate Full Stack Developer specializing in the MERN stack and advanced AI technologies. With {personalInfo.yearsOfExperience}+ years of experience, I've helped businesses transform their ideas into scalable, high-performance web applications.
                                 </p>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    My expertise spans from crafting intuitive user interfaces with
-                                    React and Next.js to building robust backend systems with
-                                    Node.js and MongoDB. I'm particularly enthusiastic about Web3
-                                    technologies and creating decentralized applications that push
-                                    the boundaries of what's possible.
+                                    My expertise stretches from designing intuitive user interfaces with React and Next.js to building robust backend systems using Node.js, MongoDB, and PostgreSQL. I'm particularly enthusiastic about Retrieval-Augmented Generation (RAG), Large Language Models (LLMs), and building smart code assistants like Vibe that leverage cutting-edge AI for real-world problem solving.
                                 </p>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    When I'm not coding, you'll find me exploring new technologies,
-                                    contributing to open-source projects, or sharing knowledge with
-                                    the developer community.
+                                    Outside of coding, I enjoy exploring new technologies, contributing to open-source projects, and sharing insights with the developer community.
                                 </p>
+
                             </div>
 
                             {/* Quick Info Cards */}
