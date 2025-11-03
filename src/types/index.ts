@@ -6,7 +6,7 @@ export interface Experience {
   location: string;
   description: string;
   achievements: string[];
-  technologies: string[];
+  technologies?: string[];
   logo?: string;
 }
 
