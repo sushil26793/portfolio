@@ -9,7 +9,7 @@ export const personalInfo: PersonalInfo = {
   phone: '+91 9696300910',
   availability: 'Open to opportunities',
   yearsOfExperience: 3,
-  avatar: '/my-profile-image.png', // Add your image to public folder
+  avatar: '/portfolio/my-profile-image.png', // Add your image to public folder
 };
 
 export const socialLinks: SocialLinks = {

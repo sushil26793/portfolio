@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: 'Hexa Home - Home/PG rental Platform',
     description: 'Modern rental marketplace bridging tenants and property owners.',
     longDescription: 'Hexa Home is a robust Home/PG rental platform designed to simplify property rentals in India. Built with a modern tech stack, it offers seamless search, booking, and management features for tenants and property owners alike. Key functionalities include real-time listing updates, secure messaging, and advanced filtering to help users find their ideal rental effortlessly',
-    image: '/hexahome.webp',  
+    image: '/portfolio/hexahome.webp',  
     technologies: ['React', 'Next.js', 'Node.js', 'MongoDB',"Redis", 'Tailwind CSS'],
     githubUrl: '',
     liveUrl: 'https://www.hexahome.in/',
