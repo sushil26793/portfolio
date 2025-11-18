@@ -13,8 +13,8 @@ export const personalInfo: PersonalInfo = {
 };
 
 export const socialLinks: SocialLinks = {
-  github: 'https://github.com/yourusername',
-  linkedin: 'https://linkedin.com/in/yourusername',
-  leetcode: 'https://leetcode.com/yourusername',
-  twitter: 'https://twitter.com/yourusername',
+  github: 'https://github.com/sushil26793',
+  linkedin: 'https://www.linkedin.com/in/sushil-kumar-0454ba185/',
+  leetcode: 'https://leetcode.com/u/10t2E1JEHY/',
+  // twitter: 'https://twitter.com/yourusername',
 };
