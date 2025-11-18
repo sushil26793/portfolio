@@ -1,69 +1,71 @@
-import {type  Project } from '../types';
+import { type Project } from '../types';
 
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'Hexa Home - Home/PG rental Platform',
-    description: 'Modern rental marketplace bridging tenants and property owners.',
-    longDescription: 'Hexa Home is a robust Home/PG rental platform designed to simplify property rentals in India. Built with a modern tech stack, it offers seamless search, booking, and management features for tenants and property owners alike. Key functionalities include real-time listing updates, secure messaging, and advanced filtering to help users find their ideal rental effortlessly',
-    image: '/portfolio/hexahome.webp',  
-    technologies: ['React', 'Next.js', 'Node.js', 'MongoDB',"Redis", 'Tailwind CSS'],
+    title: 'HexaHome – Home/PG Rental Platform',
+    description: 'Cloud-native rental marketplace connecting tenants and property owners across India.',
+    longDescription:
+      'HexaHome is a production-grade Home/PG rental platform that streamlines how tenants discover, filter, and book verified properties across India. It features high-performance search, secure authentication, and responsive UI flows tailored for property owners and renters, designed to support growing traffic and real-world business workflows.',
+    image: '/portfolio/hexahome.webp',
+    technologies: ['React', 'Next.js', 'Node.js', 'PostgreSQL', 'Redis', 'Tailwind CSS'],
     githubUrl: '',
     liveUrl: 'https://www.hexahome.in/',
     featured: true,
   },
   {
     id: '2',
-    title: 'Vibe- Your Coding Assistant',
-    description: 'Your smart AI code assistant for enhanced productivity.',
-    longDescription: 'Vibe is a full-stack code assistant powered by advanced AI language models (LLMs), helping developers code faster and smarter. It supports code completion, error detection, and context-aware suggestions in real-time within an intuitive interface. Vibe integrates secure authentication, seamless database management, and premium features powered by Stripe for subscriptions.',
+    title: 'Vibe – AI Coding Assistant',
+    description: 'Full-stack AI-powered coding assistant for faster, smarter development.',
+    longDescription:
+      'Vibe is a full-stack AI coding assistant built on top of modern LLMs to help developers write, refactor, and debug code more efficiently. It provides context-aware suggestions, error detection, and workflow automation, backed by secure authentication, a relational data model, and subscription billing for premium features.',
     image: 'https://code-agent-eight.vercel.app/logo.svg',
-    technologies: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Inngest', 'react-hook-form', 'e2b', 'Tailwind CSS'],
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Prisma',
+      'PostgreSQL',
+      'Inngest',
+      'react-hook-form',
+      'e2b',
+      'Tailwind CSS',
+    ],
     githubUrl: 'https://github.com/sushil26793/code_agent',
     liveUrl: 'https://code-agent-eight.vercel.app/',
     featured: true,
   },
   {
     id: '3',
-    title: 'Real-Time Chat Application',
-    description: 'WebSocket-based chat app with end-to-end encryption and file sharing',
-    longDescription: 'Secure messaging platform featuring real-time communication, group chats, file sharing, and end-to-end encryption for private conversations.',
-    image: '/chat-app.jpg',  // image should be in public/chat-app.jpg
-    technologies: ['React', 'Socket.io', 'Node.js', 'MongoDB', 'Redis', 'JWT'],
-    githubUrl: 'https://github.com/yourusername/chat-app',
-    liveUrl: 'https://chat-app-demo.vercel.app',
+    title: 'DevCollab – Developer Collaboration Platform',
+    description: 'Team-focused dev collaboration hub with secure workspaces and live communication.',
+    longDescription:
+      'DevCollab is a developer collaboration platform that simulates a real-world engineering workspace with secure access, team workspaces, and live communication. Developers can organize projects, manage access via role-based permissions, and collaborate through integrated messaging with code-snippet support, mirroring how modern teams work with Git, feature branches, and auth-protected tools. The UI is optimized for clarity, responsiveness, and a smooth onboarding experience.',
+    image: 'https://portfolio-p-1.netlify.app/logo.png',
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+    githubUrl: 'https://github.com/sushil26793/dev-collab',
+    liveUrl: 'https://portfolio-p-1.netlify.app/',
     featured: true,
   },
   {
     id: '4',
-    title: 'Task Management System',
-    description: 'Collaborative project management tool with team features and analytics',
-    longDescription: 'Enterprise-grade task management application with kanban boards, team collaboration, time tracking, and comprehensive project analytics.',
-    image: '/task-manager.jpg',  // image should be in public/task-manager.jpg
-    technologies: ['React', 'Express.js', 'MongoDB', 'Redux', 'Chart.js'],
-    githubUrl: 'https://github.com/yourusername/task-manager',
-    featured: false,
-  },
-  {
-    id: '5',
-    title: 'AI Content Generator',
-    description: 'AI-powered content creation tool using OpenAI API',
-    longDescription: 'Intelligent content generation platform leveraging OpenAI GPT models to create blog posts, social media content, and marketing copy.',
-    image: '/ai-content.jpg',  // image should be in public/ai-content.jpg
-    technologies: ['Next.js', 'OpenAI API', 'TypeScript', 'Tailwind CSS', 'Prisma'],
-    githubUrl: 'https://github.com/yourusername/ai-content',
-    liveUrl: 'https://ai-content-demo.vercel.app',
+    title: 'Secure Auth System – JWT, Refresh Tokens & Redis',
+    description: 'Production-grade Node.js authentication system with JWT, refresh tokens, and rate limiting.',
+    longDescription:
+      'A production-ready authentication system for MERN-style applications built with Node.js, Express, TypeScript, MongoDB, and Redis. It implements short-lived access tokens and rotating refresh tokens, token revocation with a Redis blacklist, token versioning for instant session invalidation, and HTTP-only cookie support. The system also includes rate limiting on sensitive endpoints, strong password policies with bcrypt hashing, schema validation with Zod, and security hardening via Helmet and CORS, following modern backend security best practices.',
+    image: '/portfolio/node-auth-system.webp',
+    technologies: [
+      'Node.js',
+      'Express.js',
+      'TypeScript',
+      'MongoDB',
+      'Mongoose',
+      'Redis',
+      'JWT',
+      'Zod',
+      'Docker',
+    ],
+    githubUrl: 'https://github.com/sushil26793/node-auth-system',
+    liveUrl: '', // backend service; leave empty or point to API docs if you host them
     featured: true,
-  },
-  {
-    id: '6',
-    title: 'Weather Dashboard',
-    description: 'Real-time weather tracking with interactive maps and forecasts',
-    longDescription: 'Beautiful weather application with current conditions, 7-day forecasts, interactive maps, and personalized weather alerts.',
-    image: '/weather-app.jpg',  // image should be in public/weather-app.jpg
-    technologies: ['React', 'OpenWeather API', 'Mapbox', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/yourusername/weather-dashboard',
-    liveUrl: 'https://weather-demo.vercel.app',
-    featured: false,
   },
 ];
